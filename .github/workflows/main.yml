@@ -1,4 +1,4 @@
-name: Run_minLoRA_Tests
+name: Assignment1
 
 on: 
   push:
