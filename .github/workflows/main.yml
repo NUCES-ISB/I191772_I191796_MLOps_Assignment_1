@@ -1,0 +1,31 @@
+name: Run_minLoRA_Tests
+
+on: 
+  push:
+    branches:
+      - Abdullah-dev
+
+permissions:
+  contents: read
+
+jobs:
+  run_tests:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+        
+      - name: Install Python
+        uses: actions/setup-python@v2
+              
+      - name: Install black
+        run: pip install black
+        
+      - name: Run black
+        run: python -m black --include "\\.py" ./
+        
+      - name: Install flake8
+        run: pip install flake8
+        
+      - name: Run Flake8
+        run: flake8 ./
