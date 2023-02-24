@@ -3,7 +3,7 @@ name: Assignment1
 on: 
   push:
     branches:
-      - Abdullah-dev
+      - master
 
 permissions:
   contents: read
